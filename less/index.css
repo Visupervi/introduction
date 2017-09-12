@@ -90,6 +90,7 @@ body .experience .job-exp ul li {
   float: left;
 }
 body .pro-exp ul {
+  padding: 0.25rem;
   margin-bottom: 0.25rem;
 }
 body .pro-exp ul .pro-name {
@@ -110,4 +111,8 @@ body .pro-exp ul .duty-des {
 }
 body .pro-exp ul li {
   font-size: 0.35rem;
+}
+body .edu ul li {
+  width: 25%;
+  float: left;
 }

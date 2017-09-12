@@ -24,11 +24,19 @@
         var jobExp = Tools.getElem(".job-exp");
         jobExp[0].innerHTML = express;
       //  项目经历
-        console.log(data.personal[0].projectExperience[1].responsibility);
         var proExp = template("sb",data.personal[0]);
         // console.log(proExp);
         var proContent = Tools.getElem(".pro-content");
         proContent[0].innerHTML = proExp;
+      //  教育经历
+        console.log(data.personal[0].eduBgc);
+        var eduHtml = template("edu",data.personal[0]);
+        var eduBgc = Tools.getElem(".eduBgc");
+        eduBgc[0].innerHTML = eduHtml;
+      //  自我评价
+        var selfEval = template("selfEvl",data.personal[0]);
+        var selfEvl = Tools.getElem(".self-evl");
+        selfEvl[0].innerHTML = selfEval;
       }
     })
   })();
