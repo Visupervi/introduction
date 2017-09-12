@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#607d8b">
+  <meta name="author" content="Visupervi">
+  <meta name="description" content="Visupervi">
+  <meta name="keywords" content="html,css,javascript,web,前端开发,Visupervi">
+  <link rel="stylesheet" href="../less/init.css">
+  <link rel="stylesheet" href="../less/index.css">
+  <title>个人简历</title>
+</head>
+<body>
+<!--简历header-->
+<div class="container">
+  <p class="title">魏超伟--web开发2年--上海</p>
+  <header>
+    <div class="self-info-title">
+      <img class="trabecula" src="../images/icons/image004.png">
+      <span>个人信息</span>
+      <img class="info-icon" src="../images/category/image009.png">
+    </div>
+    <div class="self-info clearfix">
+      <div class="left fl">
+        <ul>
+        </ul>
+      </div>
+      <script type="text/html" id="selfInfo">
+        <%for(var i = 1; i < selfInfo.length ; i++ ){%>
+        <li class="clearfix">
+          <img class="fl" src="<%=selfInfo[i].imgsrc%>" alt="">
+          <span class="fl"><%=selfInfo[i].info%></span>
+        </li>
+        <%}%>
+
+      </script>
+      <div class="right fl">
+        <p>魏超伟(Visupervi)</p>
+      </div>
+      <div class="center">
+        <img src="../images/icons/image015.png">
+      </div>
+    </div>
+  </header>
+  <!-- 开发技术栈 -->
+  <div class="stack">
+    <div class="technology-stack">
+      <div class="self-info-title">
+        <img class="trabecula" src="../images/icons/image004.png">
+        <span>开发技术栈</span>
+        <img class="info-icon" src="../images/category/image004.png">
+      </div>
+    </div>
+    <div class="stack-content">
+    </div>
+    <script type="text/html" id="stack">
+      <%for(var i = 0; i < technologyStack.length; i++ ){%>
+      <ul>
+        <div class="stack-title"><%=technologyStack[i]["name"]%></div>
+        <%for(var j = 0 ; j < technologyStack[i].info.length; j++ ){%>
+        <li><%=j+1%>、<%=technologyStack[i].info[j].no%>;</li>
+        <%}%>
+      </ul>
+      <%}%>
+    </script>
+  </div>
+  <!-- 工作经验 -->
+  <div class="experience stack">
+    <div class="self-info-title">
+      <img class="trabecula" src="../images/icons/image004.png">
+      <span>工作经验</span>
+      <img class="info-icon" src="../images/category/image002.png">
+    </div>
+    <div class="stack-content job-exp">
+
+    </div>
+    <script type="text/html" id="Exp">
+      <ul class="clearfix">
+        <li><%= workExperience[0].name%></li>
+        <li><%= workExperience[0].timer%></li>
+        <li><%= workExperience[0].cls%></li>
+      </ul>
+    </script>
+  </div>
+  <!-- 项目经验 -->
+  <div class="pro-exp stack">
+    <div class="self-info-title">
+      <img class="trabecula" src="../images/icons/image004.png">
+      <span>项目经验</span>
+      <img class="info-icon" src="../images/category/image003.png">
+    </div>
+    <div class="stack-content pro-content">
+
+    </div>
+    <script type="text/html" id="sb">
+      <%for(var i = 0; i < projectExperience.length; i++){%>
+      <ul>
+        <div class="pro-name"><%=projectExperience[i].name%><span><%=projectExperience[i].timer%></span></div>
+        <div class="pro-des">
+          项目描述：
+          <p><%=projectExperience[i].projectDes%></p>
+        </div>
+        <div class="duty-des">责任描述：</div>
+        <%for(var j = 0; j < projectExperience[i].responsibility.length;j++){%>
+        <li><%=j+1%>、<%=projectExperience[i].responsibility[j].num%>;</li>
+        <%}%>
+      </ul>
+      <%}%>
+    </script>
+  </div>
+  <!-- 教育背景 -->
+  <div class="edu stack">
+    <div class="self-info-title">
+      <img class="trabecula" src="../images/icons/image004.png">
+      <span>教育背景</span>
+      <img class="info-icon" src="../images/category/image010.png">
+    </div>
+    <div class="stack-content eduBgc">
+    </div>
+    <script type="text/html" id="edu">
+      <%for(var i = 0; i < eduBgc.length; i++){%>
+      <ul class="clearfix">
+        <li><%=eduBgc[i].timer%></li>
+        <li><%=eduBgc[i].school%></li>
+        <li><%=eduBgc[i].lever%></li>
+        <li><%=eduBgc[i].major%></li>
+      </ul>
+      <%}%>
+    </script>
+  </div>
+  <!-- 自我评价 -->
+  <div class="evaluation stack">
+    <div class="self-info-title">
+      <img class="trabecula" src="../images/icons/image004.png">
+      <span>自我评价</span>
+      <img class="info-icon" src="../images/category/image009.png">
+    </div>
+    <div class="stack-content self-evl">
+    </div>
+    <script type="text/html" id="selfEvl">
+      <ul>
+        <%for(var i = 0;i < selfEvaluation.length; i++){%>
+        <li><%=i+1%>、<%=selfEvaluation[i].num%>;</li>
+        <%}%>
+      </ul>
+    </script>
+  </div>
+</div>
+<script src="../tools/unit.js"></script>
+<script src="../js/index.js"></script>
+<script src="../tools/template-web.js"></script>
+</body>
+</html>
