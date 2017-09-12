@@ -1,8 +1,113 @@
 body {
-  background-color: #eee;
+  background-color: #fff;
 }
-.title {
+body .title {
   text-align: center;
-  font-size: 18px;
+  font-size: 0.625rem;
   font-weight: 600;
+}
+body .self-info-title {
+  padding: 0.25rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+body .self-info-title .trabecula {
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+}
+body .self-info-title span {
+  position: absolute;
+  font-size: 0.45rem;
+  color: #3695e5;
+  font-weight: 600;
+  top: -0.5rem;
+  left: 1.25rem;
+}
+body .self-info-title .info-icon {
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+}
+body .self-info {
+  position: relative;
+  width: 100%;
+}
+body .self-info .left {
+  width: 50%;
+}
+body .self-info .left ul li {
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+body .self-info .left ul li img {
+  display: block;
+  width: .4rem;
+  height: .4rem;
+}
+body .self-info .left ul li span {
+  font-size: 0.35rem;
+  margin-left: 0.125rem;
+}
+body .self-info .right {
+  width: 50%;
+  height: 2.875rem;
+}
+body .self-info .right p {
+  color: #3695e5;
+  font-size: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+body .self-info .center {
+  width: 0.125rem;
+  height: 2.875rem;
+  position: absolute;
+  left: 50%;
+}
+body .self-info .center img {
+  width: 100%;
+  display: block;
+}
+body .stack .stack-content {
+  padding: 0.25rem;
+}
+body .stack .stack-content ul {
+  margin-bottom: 0.25rem;
+}
+body .stack .stack-content ul .stack-title {
+  font-size: 0.45rem;
+  color: #3695e5;
+}
+body .stack .stack-content ul li {
+  font-size: 0.4rem;
+  text-indent: .5rem;
+}
+body .experience .job-exp ul li {
+  width: 33.333%;
+  float: left;
+}
+body .pro-exp ul {
+  margin-bottom: 0.25rem;
+}
+body .pro-exp ul .pro-name {
+  font-size: 0.45rem;
+  font-weight: 600;
+}
+body .pro-exp ul .pro-name span {
+  font-size: 0.35rem;
+}
+body .pro-exp ul .pro-des {
+  font-size: 0.4rem;
+}
+body .pro-exp ul .pro-des p {
+  font-size: 0.375rem;
+}
+body .pro-exp ul .duty-des {
+  font-size: 0.4rem;
+}
+body .pro-exp ul li {
+  font-size: 0.35rem;
 }

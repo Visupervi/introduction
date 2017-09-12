@@ -24,7 +24,7 @@
     mouseDrop: mouseDrop,//鼠标拖拽事件
     getWH: getWH,//获取元素不带单位的宽度和高度
     setPosition: setPosition,//对轮播图进行封装
-    ajax: ajax,//对ajax封装
+    ajax: ajax//对ajax封装
   };
   //通过标签名，类名，标签名获取元素
   function getElem(selector, parent) {
